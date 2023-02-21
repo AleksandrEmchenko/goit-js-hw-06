@@ -3,9 +3,12 @@ const input = document.querySelector('#validation-input');
 input.addEventListener('blur', checkNumber);
 
 function checkNumber (event) {
+    event.currentTarget.classList.add('invalid');
+    
     if(event.currentTarget.value.length === Number(event.currentTarget.dataset.length)){
+        
         event.currentTarget.classList.add('valid');
-    } else {
-        event.currentTarget.classList.add('invalid');
-    }
+        event.currentTarget.classList.remove('invalid');
+
+    } 
 }
