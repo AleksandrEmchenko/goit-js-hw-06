@@ -28,6 +28,7 @@ const makeElementOfGallery = ({url, alt}) => {
 const makeAllElement = images.map(makeElementOfGallery).join('');
 
 const galleryEl = document.querySelector('.gallery');
+
 galleryEl.style.listStyleType = 'none';
 galleryEl.style.display = 'flex';
 galleryEl.style.flexWrap = 'wrap';
