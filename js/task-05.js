@@ -1,9 +1,10 @@
-const input = document.querySelector('#name-input');
-const output = document.querySelector('#name-output');
+const input = document.querySelector("#name-input");
+const output = document.querySelector("#name-output");
 
-input.addEventListener('input', onInput);
+input.addEventListener("input", handleTextSubstitution);
 
-function onInput (event) {
-    console.log(event.currentTarget.value);
-    output.textContent = event.currentTarget.value;
+function handleTextSubstitution(event) {
+    !event.currentTarget.value
+    ? output.textContent = "Anonymous"
+    : (output.textContent = event.currentTarget.value);
 }

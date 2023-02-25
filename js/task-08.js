@@ -1,9 +1,9 @@
 const form = document.querySelector('.login-form');
 
-form.addEventListener('submit', onFormSubmit);
+form.addEventListener('submit', handleFormControl);
 const {email, password} = form;
 
-function onFormSubmit (event) {
+function handleFormControl (event) {
     event.preventDefault();
 
     if (email.value === "" || password.value === "") {
