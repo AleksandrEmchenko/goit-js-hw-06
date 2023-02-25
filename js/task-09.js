@@ -13,5 +13,4 @@ function handleColorChange(event) {
 
   colorEl.textContent = currentColor;
   body.style.backgroundColor = currentColor;
-  // btnEl.style.backgroundColor = currentColor;
 }

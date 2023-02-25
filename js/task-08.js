@@ -10,8 +10,8 @@ function handleFormControl (event) {
     alert ("Please fill in all the fields!");
   }
 
-  console.log(`Login: ${email.value}`);
-  console.log(`Password: ${password.value}`);
-
-  event.currentTarget.reset();
+    if(email.value && password.value) {
+      console.log(`{ ${email.value}; ${password.value} }`);
+      event.currentTarget.reset();
+    }
 }

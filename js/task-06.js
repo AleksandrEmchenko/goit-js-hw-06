@@ -2,14 +2,18 @@ const input = document.querySelector("#validation-input");
 
 input.addEventListener("blur", handleFocusOnInput);
 
-function handleFocusOnInput(event) {
-  event.currentTarget.classList.add("invalid");
 
-  if (
-    event.currentTarget.value.length ===
-    Number(event.currentTarget.dataset.length)
-  ) {
-    event.currentTarget.classList.add("valid");
-    event.currentTarget.classList.remove("invalid");
-  }
+function handleFocusOnInput(event) {
+
+  const value = event.currentTarget.value.length;
+  const dataset = event.currentTarget.dataset.length;
+  const fild = event.currentTarget;
+
+  if (value === Number(dataset) ) {
+    fild.classList.add("valid");
+    fild.classList.remove("invalid");
+   } else {
+     fild.classList.remove("valid");
+     fild.classList.add("invalid");
+   }  
 }

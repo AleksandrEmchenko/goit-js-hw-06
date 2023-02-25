@@ -23,4 +23,3 @@ const listItems = createList(ingredients);
 
 const ingredientsList = document.querySelector('#ingredients');
 ingredientsList.append(...listItems);
-// console.log(ingredientsList);
