@@ -13,14 +13,11 @@ const images = [
   },
 ];
 
-const makeElementOfGallery = ({url, alt}) => {
-  return`
+const makeElementOfGallery = (image) => {
+  const {url, alt} = image;
+   return`
   <li>
-  <img
-   src = "${url}",
-   alt = "${alt}" ,
-   width = "320",
-   >
+    <img src="${url}" alt="${alt}" width="320">
   </li>
   `;
 }
